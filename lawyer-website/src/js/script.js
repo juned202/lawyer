@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Mobile navbar toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active'); // toggle 'active' class for sliding
+        });
+    }
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+    
     const contactForm = document.getElementById('contactForm');
 
     contactForm.addEventListener('submit', function(event) {
@@ -32,3 +50,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
