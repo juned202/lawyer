@@ -802,6 +802,12 @@ footer {
     .nav-toggle {
         display: flex;
     }
+
+     .profile-pic {
+        display: block;         /* make it a block element */
+        margin: 0 auto;         /* center horizontally */
+        text-align: center;     /* in case it has inline content */
+    }
     
     .about-content {
         grid-template-columns: 1fr;
